@@ -1,0 +1,26 @@
+# Trigger a Vercel production rebuild of elementarycomplexity.com
+# whenever the writing repo's main branch changes.
+#
+# The deploy hook URL is stored as the VERCEL_DEPLOY_HOOK secret.
+# It tells Vercel: "rebuild elementarycomplexitydotcom from main."
+# The site's sync-writing.mjs script then fetches the latest tarball
+# from THIS repo and compiles the posts into the site.
+
+name: Trigger site rebuild
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}")
+          echo "Vercel responded with HTTP $response"
+          if [ "$response" -lt 200 ] || [ "$response" -ge 300 ]; then
+            echo "::error::Deploy hook returned HTTP $response"
+            exit 1
+          fi
