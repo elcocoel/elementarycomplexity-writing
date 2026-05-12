@@ -290,22 +290,28 @@ Sentinel's work streams run concurrently, not sequentially. The pattern library 
 Delivery times reflect production work. Coordination with external parties (HoS platform team, milestone reviewers) runs in parallel and is not included in week estimates.
 
 ```mermaid
+%%{init: {'gantt': {'barHeight': 96, 'barGap': 56, 'topPadding': 96, 'leftPadding': 360, 'rightPadding': 40, 'gridLineStartPadding': 12, 'fontSize': 26, 'sectionFontSize': 22, 'numberSectionStyles': 4, 'useMaxWidth': true}}}%%
 gantt
     dateFormat YYYY-MM-DD
     axisFormat  
     tickInterval 1week
 
+    %% deliverable m1: Pattern Taxonomy
+    %% deliverable m2: Pattern Library
+    %% deliverable m3: Evaluation Engine
+    %% deliverable m4: Closed Loop
+
     section Constitutional Baseline
-    Constitutional Baseline           :m1, 2026-06-02, 7d
+    Week 1            :m1, 2026-06-02, 7d
 
     section Library ↔ Engine
-    Library and Engine Interface      :m2, after m1, 14d
+    Weeks 2–3         :m2, 2026-06-09, 14d
 
     section Production + Integration
-    Production Engine + Integration   :m3, after m1, 14d
+    Weeks 3–5         :m3, 2026-06-16, 21d
 
     section Closed Loop
-    Closed Loop                       :m4, after m2, 14d
+    Weeks 5–6         :m4, 2026-06-30, 14d
 ```
 
 
