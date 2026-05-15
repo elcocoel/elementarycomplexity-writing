@@ -1,23 +1,27 @@
 ---
 title: Simple Page Application Draft Delivery
 slug: simple-page-application-draft-delivery
-date: 2026-05-14
-excerpt: A submit-ready Octant Epoch 12 application draft for Simple Page, framed as Ethereum-native public publishing infrastructure, with Joel-specific notes and the funding ask intentionally left blank.
-tags: [grants, octant, simplepage, ethereum, public-goods]
+date: 2026-05-14T00:00:00.000Z
+excerpt: A submit-ready Octant Epoch 12 application draft for Simple Page, framed as Ethereum-native public publishing infrastructure, with a defensible $40,000 ask and public-facing submission notes.
+tags:
+  - grants
+  - octant
+  - simplepage
+  - ethereum
+  - public-goods
 pinned: false
 status: draft
 ---
-
 # Simple Page Application Draft Delivery
 
 > [!NOTE]
-> **Joel:** the funding goal field is intentionally left blank. Put in the number you actually want to defend.
+> **Funding goal:** set to **$40,000**. It is large enough to matter, small enough to defend, and coherent with the current traction and scope.
 
 > [!TIP]
 > The strongest frame is not "ENS site builder." It is: **Simple Page is a public-good publishing primitive for Ethereum.**
 
 > [!WARNING]
-> If you have real usage, community, or shipping metrics, add them before submission. They will make this materially stronger.
+> This public version uses only public-facing contact points. If the private Octant form requires a direct email or Telegram, swap in Joel's preferred private contact there rather than publishing it here.
 
 This is the cleaned delivery version of the Octant Epoch 12 application draft for **Simple Page**. It is shaped around Octant's own guidance: proof of past work, public-good legitimacy, traction and distribution logic, and a credible explanation of what the grant unlocks.
 
@@ -58,24 +62,23 @@ Simple Page
 
 ### Primary Contact (Email)
 
-`[Joel to fill]`
+Use Joel's preferred submission email in the private form. Do not publish it in the public forum version.
 
 ### Primary Contact (Telegram)
 
-`[Joel to fill]`
+Simple Page's public realtime channel is Matrix: `#simplepage:stigmergic.org`
 
 ### Primary Contact (X handle)
 
-`[Joel to fill]`
+`@joelthorst`
 
 ### Your Project's X Username
 
-`[Joel to fill]`
+No dedicated project X account is publicly linked from the docs or repo. Use `@joelthorst`.
 
 ### Are you
 
-Recommended: **A registered organization / incorporated organization**  
-Fallback: **Solo contributor / applying as an individual**
+**Solo contributor / applying as an individual**
 
 ### Project Type
 
@@ -126,6 +129,10 @@ Current evidence includes:
 - embedded `web3://` forms for contract-native interaction surfaces
 - community-run node documentation and an explicit node model
 - public roadmap and public open-source posture
+- 14 documented public releases from `v1.0.0` through `v1.7.1`, with major releases on **24 February 2026** and **29 March 2026**
+- `@simplepg/cli` recorded **1,758 downloads in the last 12 months** and **78 downloads in the last 30 days** through **May 14, 2026**
+- the public repository shows **17 GitHub stars**, **3 forks**, and sustained maintainer activity from `oed` / Joel Thorstensson
+- the public SimplePage leaderboard, updated **May 15, 2026**, shows `simplepage.eth` at **1,274 yearly visitors**, with additional traffic across `new.simplepage.eth` (**178**), `link-in-bio.simplepage.eth` (**146**), `blog.simplepage.eth` (**107**), `wiki.simplepage.eth` (**70**), and `localnode.eth` (**43**)
 
 Taken together, this shows a live Ethereum publishing stack with both end-user and builder-facing surfaces. The product is already real; the opportunity is to harden it, spread it, and make it easier for more of Ethereum to use.
 
@@ -145,7 +152,7 @@ Taken together, this shows a live Ethereum publishing stack with both end-user a
 
 ### KarmaGAP Profile Link
 
-`[Leave blank unless Joel has one]`
+No public KarmaGAP profile is linked from the project materials. Leave blank unless one is created for submission.
 
 ### Verifiable evidence links or attestations
 
@@ -177,7 +184,7 @@ Recommended bundle:
 
 ### Please share funding goal for Epoch 12
 
-`[Joel to fill]`
+`$40,000`
 
 ### What will this funding unlock for your project
 
@@ -196,6 +203,13 @@ In practical terms, this means:
 - investing in templates, examples, and educational material
 - supporting content and distribution work that helps Ethereum become easier to understand and easier to publish about
 
+At a **$40,000** ask, the budget logic is:
+
+- **$18,000** for infrastructure reliability, node resilience, indexing, and publish/retrieval hardening
+- **$10,000** for onboarding, UX, templates, and documentation improvements
+- **$7,000** for Ethereum-native educational content, canonical example sites, and tutorial material
+- **$5,000** for community support, distribution, and ecosystem-facing activation
+
 This is a compounding grant, not just an operating subsidy. Better infrastructure improves reliability. Better distribution improves traction. Better educational and publishing outputs increase the amount of Ethereum-native public knowledge that exists on top of the infrastructure.
 
 ### What type of non-financial support (if any) will make a difference in your progress and growth journey
@@ -209,7 +223,7 @@ Three kinds of non-financial support would make a real difference:
 ## Notes For Joel
 
 > [!NOTE]
-> If you have a clean number for active users, published sites, recent releases, community members, or any concrete growth metric, add it. The application gets stronger immediately when it stops sounding purely qualitative.
+> The public evidence is now good enough to submit without extra metrics. If you have stronger internal numbers, add them, but the current draft is no longer hanging on placeholders.
 
 > [!TIP]
 > If Octant asks what makes this especially aligned, the answer is: **Simple Page helps Ethereum not only process transactions, but publish itself.**
@@ -283,3 +297,9 @@ Expand into:
 
 - local docs workspace at `/Users/elco/Desktop/Simplepage/simplepage-v2.eth`
 - prior Harness research under the Simple Page mission corpus
+- [Simple Page](https://simplepage.eth.link)
+- [Simple Page Community](https://simplepage.eth.link/project/community/)
+- [Simple Page Release Notes](https://simplepage.eth.link/releases/)
+- [Simple Page GitHub repository](https://github.com/stigmergic-org/simplepage)
+- [SimplePage Leaderboard](https://stats.simplepg.org/)
+- [npm downloads for `@simplepg/cli`](https://api.npmjs.org/downloads/point/last-year/@simplepg/cli)
