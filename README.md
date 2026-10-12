@@ -31,7 +31,8 @@ slug: loyalty-gated-redemption           # optional; defaults to filename minus 
 date: 2026-05-15                         # ISO date; the canonical publication day
 excerpt: A counter-proposal to GIP-150.  # 1–2 sentence summary for the index card + RSS
 cover: ./media/lgrp-cover.png            # optional hero image (relative path, resolved at build time)
-ogImage: ./media/lgrp-og.png             # optional OG image override
+ogImage: ./media/lgrp-og.png             # optional image for the branded social card
+ogImagePosition: center                 # optional CSS object-position; e.g. left for a portrait
 tags: [governance, gnosis, zk-proofs]    # free-form, lowercase
 pinned: false                            # if true, floats to the top of /writing
 status: published                        # draft | scheduled | published
