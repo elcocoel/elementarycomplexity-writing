@@ -9,7 +9,7 @@ Articles, think pieces, research notes, and governance proposal supplements live
 - **Canonical URLs for ideas.** A piece at `elementarycomplexity.com/writing/<slug>` is the public, durable address. The Markdown source in this repo is the version that survives any platform.
 - **Forkable, citable, mirror-able.** Clone it. Fork it. PR a typo. Quote a paragraph with a permalink to a specific line.
 - **Mirrored on-chain.** Pieces also get published to a [Simplepage](https://simplepage.eth.link) for ENS / IPFS provenance.
-- **Plain markdown.** No proprietary CMS, no walled garden, no algorithmic feed. At build time, the `elementarycomplexity.com` site pulls the `posts/` folder from this repo, compiles each `.md` file through a pipeline called **Scriptorium** (part of the private site codebase), and outputs a fully rendered article page. Push to `main` here → site rebuilds within ~60 seconds.
+- **Plain markdown.** No proprietary CMS, no walled garden, no algorithmic feed. At build time, the `elementarycomplexity.com` site pulls the `posts/` folder from this repo, compiles each `.md` file through a pipeline called **Scriptorium** (part of the private site codebase), and outputs a fully rendered article page. Production builds read the exact commit pinned in the website repository’s `writing.lock.json`. Publishing is manual; pushing this repository does not rebuild or deploy the website.
 
 ## Structure
 
@@ -60,9 +60,27 @@ The Scriptorium engine renders:
 
 1. Add or edit a Markdown file in `posts/`.
 2. Set `status: published` in frontmatter.
-3. Commit + push to `main`.
-4. The website rebuilds and the piece is live within ~30–60 seconds.
-5. (Optional) Mirror the same `.md` to Simplepage for ENS / IPFS provenance.
+3. Review the content, commit it, and push this repository’s `main`. Record the full
+   40-character writing commit SHA (`git rev-parse HEAD`) and confirm it is on GitHub.
+4. In `elementarycomplexitydotcom`, update `writing.lock.json` to that reviewed writing
+   commit. Keep `repository` set to `elcocoel/elementarycomplexity-writing`.
+5. Validate the website changes, then commit and push its `main`. Both repositories
+   must be clean and pushed before deployment.
+6. From the website repository, run `node scripts/deploy-site.mjs ec --check`, then
+   `node scripts/deploy-site.mjs ec` for the intended production release. The helper
+   exports committed website source; Vercel builds it with the pinned writing commit.
+7. Confirm Vercel reports Ready and verify the article at
+   `https://elementarycomplexity.com/writing/<slug>` and on the writing index.
+8. (Optional) Mirror the same `.md` to Simplepage for ENS / IPFS provenance.
+
+The website’s [production strategy](https://github.com/elcocoel/elementarycomplexitydotcom/blob/main/docs/PRODUCTION.md)
+is the canonical deployment reference. Production ignores local writing paths and moving
+branch overrides; local development can still read drafts from this checkout.
+
+The automatic rebuild workflow has been removed, the `writing-repo-sync` Vercel deploy
+hook revoked, and the `VERCEL_DEPLOY_HOOK` GitHub Actions secret removed. Do not restore
+push-triggered deploy workflows or deploy hooks. A documentation-only writing commit does
+not require changing the website’s content pin or deploying.
 
 ## License
 
